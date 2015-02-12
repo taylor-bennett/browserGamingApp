@@ -1,0 +1,19 @@
+<% provide(:title, "Create") %>
+
+<h1>Upload a file</h1>
+
+<%#
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select file to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
+</form>
+%>
+
+<% form_tag 'create', :multipart => true do %>
+  <%= file_field_tag 'attachment' %>
+  <%= submit_tag "Send Attachment" %>
+<% end %>
+
+
